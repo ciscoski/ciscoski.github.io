@@ -1,1 +1,74 @@
-theme: jekyll-theme-minimal
+remote_theme: "mmistakes/minimal-mistakes@4.23.0" 
+
+minimal_mistakes_skin: "dark"
+locale: "en"
+timezone: "Europe/London"
+
+title: "Ciscoski's brain dump"
+title_reparator: ">>"
+subtitle: #""
+description: >- # this means to ignore newlines until "baseurl:"
+  Ciscoski's github page.
+  My effort to give back to the comunity.
+
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://www.ciscoski.me" # the base hostname & protocol for your site, e.g. http://example.com
+repository: "ciscoski/ciscoski.github.io"
+
+logo: "/assets/images/noun_Brain_3867897.svg"
+
+links: &social_links
+    - label: "EMail"
+      icon: "fas fa-fw fa-at"
+      url: "mailto:mail@ciscoski.me"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/ciscoski"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/francescocervellera"
+
+
+footer:
+  links: *social_links
+
+
+comments:
+  provider: "utterances"
+  utterances:
+    theme: "github-dark"
+    issue_term: "pathname"
+search: true
+
+name: "Cisco Cervellera"
+social: &social
+  links: # An array of links to social media profiles
+    - "https://twitter.com/ciscoski"
+    - "https://facebook.com/ciscoski"
+    - "https://www.linkedin.com/in/francescocervellera"
+author:
+  name     : "Cisco Cervellera"
+  avatar   : "/assets/images/bio-photo.png"
+  bio      : ""
+  location : "Cambridge, UK"
+  links: *social_links
+
+
+plugins:
+  - jekyll-feed
+  - jekyll-include-cache
+
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      show_date: true
+      read_time: true
+      comments: false
+      share: true
+      related: true
