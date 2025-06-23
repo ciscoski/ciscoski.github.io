@@ -1,6 +1,6 @@
 ---
 title:  "Using Git Credential Manager (GCM) on Windows inside WSL"
-date:   2025-06-23 10:52:00 +0100
+date:   2025-06-23 00:00:00 +0100
 categories: wsl2 wsl git 
 ---
 
