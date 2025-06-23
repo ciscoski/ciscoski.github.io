@@ -4,8 +4,6 @@ date:   2025-06-23 00:00:00 +0100
 categories: wsl2 wsl git 
 ---
 
-# Using Git Credential Manager (GCM) on Windows inside WSL
-
 This guide shows how to use the Git Credential Manager (GCM) installed on Windows to handle Git credentials securely from within WSL (Windows Subsystem for Linux).
 
 ## 🛠️ Prerequisites
@@ -29,29 +27,29 @@ sudo apt install git
 
 1. **Create a Git configuration that tells Git in WSL to use the Windows GCM executable**:
 
-```bash
-git config --global credential.helper "/mnt/c/Users/<YourUsername>/scoop/shims/git-credential-manager.exe"
-```
+    ```bash
+    git config --global credential.helper "/mnt/c/Users/<YourUsername>/scoop/shims/git-credential-manager.exe"
+    ```
 
-Replace `<YourUsername>` with your actual Windows username. If unsure, run `cmd.exe /c "echo %USERNAME%"` from WSL.
+    Replace `<YourUsername>` with your actual Windows username. If unsure, run `cmd.exe /c "echo %USERNAME%"` from WSL.
 
 2. **Set Git to use the correct credential store** (optional, usually auto-detected by GCM):
 
-```bash
-git-credential-manager configure
-```
+    ```bash
+    git-credential-manager configure
+    ```
 
 3. **Verify GCM is being used**:
 
-```bash
-git credential-manager diagnose
-```
+    ```bash
+    git credential-manager diagnose
+    ```
 
 4. **Test by cloning or pushing to a private repo**:
 
-```bash
-git clone https://github.com/your-private/repo.git
-```
+    ```bash
+    git clone https://github.com/your-private/repo.git
+    ```
 
 When prompted, authenticate via the browser or your credential store.
 
